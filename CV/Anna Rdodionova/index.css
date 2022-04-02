@@ -1,0 +1,84 @@
+body {
+    font-family: 'BIZ UDMincho', serif;
+    font-size: 15px;
+}
+
+table, th, td {
+    border-bottom: 1px dashed black;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+}
+
+td {
+    text-align: right;
+}
+
+.extra_small {
+    display: none;
+}
+
+section {
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+}
+
+.right_left {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 20px;
+}
+
+.right_left_avatar {
+    grid-template-columns: auto 1fr;
+}
+
+.right_left img {
+    height: 100%;
+}
+
+/* .right_left_float {
+    width: 100%;
+    height: 300px;
+}
+
+.right_left_float > div {
+    width: fit-content;
+    float: left
+} */
+
+@media screen and (max-width: 1000px) {
+    .right_left, .right_left_avatar {
+        grid-template-columns: 100%;
+        gap: 0;
+        text-align: center;
+    }
+
+    body {
+        font-size: 25px;
+    }
+    
+    address table {
+        margin: auto;
+    }
+
+    .right_left img {
+        width: 70%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .extra_small {
+        display: block;
+    }
+
+    address table {
+        display: none;
+    }
+}
